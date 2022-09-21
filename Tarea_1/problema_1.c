@@ -3,14 +3,14 @@
 #include <time.h> 
 
 
-#define MAX 1000
-
-int main(){
+int main(int argc, char** argv[]){
 
     //time_t t1;
     //srand((unsigned) time(&t1));
     srand((unsigned int) time(NULL));  
-    
+    int MAX = atoi(argv[1]);
+    //printf("%d",MAX);
+
     double A[MAX][MAX];
 
     double x[MAX];
@@ -96,5 +96,5 @@ int main(){
     elapsed = (double)(stop1 - start1) * 1000.0 / CLOCKS_PER_SEC;
     printf("Time elapsed in ms: %f\n\n", elapsed);
 
-    return (0);
+    return 0;
 }
